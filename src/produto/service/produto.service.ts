@@ -20,15 +20,6 @@ export class ProdutoService{
         })
     }
 
-    async findByDisponibilidade(disponibilidade: boolean): Promise<Produto[]>{
-        return await this.ProdutoRepository.find({})
-    }
-    
-    
-    async findByReutilizavel(reutilizavel: boolean): Promise<Produto[]>{
-            return await this.ProdutoRepository.find({})
-    }
-
     async findById(id: number): Promise<Produto> {
 
         let produto = await this.ProdutoRepository.findOne({
@@ -57,7 +48,7 @@ export class ProdutoService{
                 usuario: true
             }
         })
-}
+    }
 
     async create(produto: Produto): Promise<Produto>{
         return await this.ProdutoRepository.save(produto)

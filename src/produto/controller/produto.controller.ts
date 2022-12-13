@@ -18,18 +18,6 @@ export class ProdutoController{
         return this.ProdutoService.findAll();
     }
 
-    @Get('/disponibilidade/:disponibilidade')
-    @HttpCode(HttpStatus.OK)
-    findByDisponibilidade(@Param('disponibilidade') disponibilidade: boolean): Promise<Produto[]>{
-        return this.ProdutoService.findByDisponibilidade(disponibilidade)
-    }
-
-    @Get('/reutilizavel/:reutilizavel')
-    @HttpCode(HttpStatus.OK)
-    findByReutilizavel(@Param('reutilizavel') reutilizavel: boolean): Promise<Produto[]>{
-        return this.ProdutoService.findByReutilizavel(reutilizavel)
-    }
-
     @Get('/:id')
     @HttpCode(HttpStatus.OK)
     findById(@Param('id', ParseIntPipe) id: number): Promise<Produto>{

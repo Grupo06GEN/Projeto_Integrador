@@ -18,10 +18,6 @@ export class CategoriaService{
         })
     }
 
-    async findByDoacao(doacao: boolean): Promise<Categoria[]>{
-        return await this.categoriaRepository.find({})
-    }
-
     async findById(id: number): Promise<Categoria> {
         let categoria = await this.categoriaRepository.findOne({
             where: {

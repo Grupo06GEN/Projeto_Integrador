@@ -19,7 +19,7 @@ import { UsuarioModule } from './usuario/usuario.module';
     //   username: 'root',
     //   password: 'root',
     //   database: 'db_saudeebemestar',
-    //   entities: [Categoria, Usuario, Produto],
+    //   // entities: [Categoria, Usuario, Produto],
     //   synchronize: true
 
     // }),

@@ -24,12 +24,6 @@ export class CategoriaController {
         return this.categoriaService.findById(id)
     }
 
-    @Get('/doacao/:doacao')
-    @HttpCode(HttpStatus.OK)
-    findByDoacao(@Param('doacao') doacao: boolean): Promise<Categoria[]>{
-        return this.categoriaService.findByDoacao(doacao)
-    }
-
     @Get('/nome/:nome')
     @HttpCode(HttpStatus.OK)
     findByNome(@Param('nome') nome: string): Promise<Categoria[]>{
